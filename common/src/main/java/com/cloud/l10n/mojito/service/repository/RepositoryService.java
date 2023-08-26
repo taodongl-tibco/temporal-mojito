@@ -114,7 +114,7 @@ public class RepositoryService {
 
         repository.setTm(tm);
 
-        logger.debug("Create the repository stastics entity");
+        logger.debug("Create the repository statics entity");
         RepositoryStatistic repositoryStatistic =
                 repositoryStatisticRepository.save(new RepositoryStatistic());
 

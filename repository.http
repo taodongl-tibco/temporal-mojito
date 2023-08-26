@@ -1,0 +1,10 @@
+POST http://localhost:8383/api/repositories
+Content-Type: application/json
+
+{
+  "name": "demo",
+  "locales": [
+    "ja-JP",
+    "ru-RU"
+  ]
+}

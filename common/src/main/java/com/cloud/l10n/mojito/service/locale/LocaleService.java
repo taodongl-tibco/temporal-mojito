@@ -74,6 +74,10 @@ public class LocaleService {
         return getLocalesIdMap().get(localeId);
     }
 
+    public List<Locale> findByBcp47Tags(List<String> tags) {
+        return localeRepository.findLocalesByBcp47TagIn(tags);
+    }
+
     public Locale getDefaultLocale() {
         return findByBcp47Tag(DEFAULT_LOCALE_BCP47_TAG);
     }

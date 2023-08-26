@@ -76,13 +76,13 @@ public class UnescapeStep extends BasePipelineStep {
                 try {
                     String filterConfigId =
                             assetPathToFilterConfigMapper.getFilterConfigIdFromPath(asset.getPath());
-                    if (AndroidFilter.FILTER_CONFIG_ID.equals(filterConfigId)
-                            || AssetPathToFilterConfigMapper.MACSTRINGS_FILTER_CONFIG_ID.equals(filterConfigId)) {
-                        String targetContent = textUnit.getTarget(targetLocale).toString();
-                        targetContent = unescape(targetContent);
-                        TextContainer target = new TextContainer(targetContent);
-                        textUnit.setTarget(targetLocale, target);
-                    }
+//                    if (AndroidFilter.FILTER_CONFIG_ID.equals(filterConfigId)
+//                            || AssetPathToFilterConfigMapper.MACSTRINGS_FILTER_CONFIG_ID.equals(filterConfigId)) {
+//                        String targetContent = textUnit.getTarget(targetLocale).toString();
+//                        targetContent = unescape(targetContent);
+//                        TextContainer target = new TextContainer(targetContent);
+//                        textUnit.setTarget(targetLocale, target);
+//                    }
                 } catch (UnsupportedAssetFilterTypeException ex) {
                     logger.debug("Could not find the asset filter type", ex);
                 }

@@ -23,6 +23,7 @@
     <properties>
         <java.version>17</java.version>
         <temporal.version>1.21.1</temporal.version>
+        <okapi.version>1.45.0</okapi.version>
     </properties>
 
     <dependencyManagement>
@@ -36,6 +37,26 @@
                 <groupId>io.temporal</groupId>
                 <artifactId>temporal-sdk</artifactId>
                 <version>${temporal.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sf.okapi</groupId>
+                <artifactId>okapi-core</artifactId>
+                <version>${okapi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sf.okapi.steps</groupId>
+                <artifactId>okapi-step-common</artifactId>
+                <version>${okapi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sf.okapi.filters</groupId>
+                <artifactId>okapi-filter-its</artifactId>
+                <version>${okapi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sf.okapi.filters</groupId>
+                <artifactId>okapi-filter-json</artifactId>
+                <version>${okapi.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

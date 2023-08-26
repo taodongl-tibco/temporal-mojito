@@ -1,6 +1,7 @@
 package com.cloud.l10n.mojito.okapi.asset;
 
 import com.google.common.io.Files;
+import net.sf.okapi.filters.json.JSONFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -71,19 +72,19 @@ public class AssetPathToFilterConfigMapper {
     private enum AssetFilterType {
         //        CSV(CSVFilter.FILTER_CONFIG_ID, "csv"),
         XLIFF(XLIFF_FILTER_CONFIG_ID, "xlf", "xliff", "sdlxliff", "mxliff"),
-        PROPERTIES(PROPERTIES_FILTER_CONFIG_ID, "properties");
+        PROPERTIES(PROPERTIES_FILTER_CONFIG_ID, "properties"),
 //        ANDROIDSTRINGS(AndroidFilter.FILTER_CONFIG_ID, "xml"),
 //        MACSTRINGS(MACSTRINGS_FILTER_CONFIG_ID, "strings"),
 //        MACSTRINGSDICT(MacStringsdictFilter.FILTER_CONFIG_ID, "stringsdict"),
 //        PO(POFilter.FILTER_CONFIG_ID, "pot"),
-//        RESX(RESX_FILTER_CONFIG_ID, "resx", "resw"),
+        RESX("okf_xml-resx", "resx"),
 //        XTB(XTB_FILTER_CONFIG_ID, "xtb"),
 //        JS(JS_FILTER_CONFIG_ID, "ts", "js"),
-//        JSON(JSONFilter.FILTER_CONFIG_ID, "json"),
+        JSON("okf_json", "json");
 //        YAML(YamlFilter.FILTER_CONFIG_ID, "yaml");
 
-        private String configId;
-        private Set<String> supportedExtensions = new HashSet<>();
+        private final String configId;
+        private final Set<String> supportedExtensions = new HashSet<>();
 
         AssetFilterType(String configId, String... supportedExtensions) {
             this.configId = configId;

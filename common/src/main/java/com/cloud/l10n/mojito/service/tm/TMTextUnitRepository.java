@@ -33,7 +33,7 @@ public interface TMTextUnitRepository extends JpaRepository<TMTextUnit, Long> {
     List<TMTextUnit> findByAssetId(Long assetId);
 
     @Query(
-            "select new com.box.l10n.mojito.service.tm.TextUnitIdMd5DTO(tu.id, tu.md5) from TMTextUnit tu where tu.asset.id = ?1")
+            "select new com.cloud.l10n.mojito.service.tm.TextUnitIdMd5DTO(tu.id, tu.md5) from TMTextUnit tu where tu.asset.id = ?1")
     List<TextUnitIdMd5DTO> getTextUnitIdMd5DTOByAssetId(Long assetId);
 
     @Query("select tu.id from TMTextUnit tu where tu.asset.id = ?1")

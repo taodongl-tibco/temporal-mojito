@@ -25,7 +25,6 @@ import java.util.Set;
         @NamedSubgraph(
                 name = "branchGraph",
                 attributeNodes = {
-                        @NamedAttributeNode(value = "screenshots"),
                         @NamedAttributeNode(value = "repository"),
                 }))
 @NamedEntityGraph(
@@ -37,7 +36,6 @@ import java.util.Set;
                 @NamedSubgraph(
                         name = "branchGraph",
                         attributeNodes = {
-                                @NamedAttributeNode(value = "screenshots"),
                                 @NamedAttributeNode(value = "repository"),
                         })
         })
